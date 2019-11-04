@@ -51,7 +51,7 @@ resource "vsphere_distributed_virtual_switch" "dvs" {
   }
 }
 
-resource "vsphere_distributed_port_group" "pvs_port_group" {
+resource "vsphere_distributed_port_group" "prod_port_group" {
   name           = "${var.port_group_name}"
   distributed_virtual_switch_uuid = "${vsphere_distributed_virtual_switch.dvs.id}"
   vlan_id        =  "${var.vlan_id}"
@@ -81,7 +81,7 @@ resource "vsphere_virtual_machine" "web" {
   }
 
  network_interface {
-    network_id = "${vsphere_distributed_port_group.pvs_port_group.id}"
+    network_id = "${vsphere_distributed_port_group.prod_port_group.id}"
     use_static_mac = "false"
   }
 
@@ -133,7 +133,7 @@ resource "vsphere_virtual_machine" "app" {
 
   
   network_interface {
-    network_id = "${vsphere_distributed_port_group.pvs_port_group.id}"
+    network_id = "${vsphere_distributed_port_group.prod_port_group.id}"
     use_static_mac = "false"
   }
 
