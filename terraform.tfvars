@@ -9,7 +9,7 @@ esxi_hosts = ["10.122.17.128"]
 vsphere_datastore = "DS01"
 vsphere_network = "VM Network"
 vlan_id = "800"
-port_group_name = "pvs"
+port_group_name = "prod"
 vsphere_hardware_version = "10"
 iso_path = "ISO/current.iso"
 
