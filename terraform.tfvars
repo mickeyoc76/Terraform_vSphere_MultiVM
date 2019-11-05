@@ -26,10 +26,10 @@ web  = [
     {
         hostname = "Web01"
         mac_Address = "AA:00:50:56:e8:d1"
-        AssetTag = "1234322"
+        AssetTag = "1234322"  # This will create an entry in the advanced settings of the VM
         CPU_Count = "1"
         RAM = "100"
-        Tag = "Webserver01"
+        Tag = "Webserver01"   # This will populate the 'Notes' section in the virtual machine summary
         disk1 = "10"
         disk2 = "20"
         folder_path = "Web"
