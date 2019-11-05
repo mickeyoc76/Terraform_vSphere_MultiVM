@@ -1,6 +1,6 @@
 vsphere_user = "administrator@vsphere.local"
 vsphere_password = "enterpass"
-vsphere_server = "10.122.17.130"
+vsphere_server = "vcsa.deise.com"
 vsphere_datacenter = "deise"
 vsphere_compute_cluster = "Deise_Cluster"
 vsphere_dvs = "dvs"
